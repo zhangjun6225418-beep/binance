@@ -1,0 +1,14 @@
+name: Binance API Diagnose
+
+on:
+workflow_dispatch:
+
+jobs:
+diagnose:
+runs-on: ubuntu-latest
+steps:
+- name: Checkout repository
+uses: actions/checkout@v4
+
+  - name: Test Binance public API
+    run: python binance_api_diagnose.py
